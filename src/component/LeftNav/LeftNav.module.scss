@@ -1,0 +1,30 @@
+.NavContainer{
+  width: 260px;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #F6F7F8;
+}
+
+.logoGroup {
+  width: 100%;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .logoImg {
+    width: 170px;
+    margin-bottom: 40px;
+    display: block;
+  }
+  .divider {
+    height: 1px;
+    width: 196px;
+    background-color: #E2E8F0;
+  }
+}
