@@ -1,5 +1,6 @@
 import LeftNav from '../component/LeftNav'
 import Header from '../component/Header'
+import MainContent from '../component/MainContent'
 import mainStyle from './MainPage.module.scss'
 import { NavCastListContext } from '../context/constContext'
 import { useContext, useState } from 'react'
@@ -20,6 +21,7 @@ export default function MainPage() {
       <MainPageContainer>
         <LeftNav />
         <Header />
+        <MainContent />
       </MainPageContainer>
     </NavCastListContext.Provider>
   );

@@ -51,6 +51,12 @@ td {
   text-align: initial;
 }
 
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 ::-webkit-scrollbar {
   /* make scrollbar transparent */
   width: 0px;

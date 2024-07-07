@@ -1,4 +1,4 @@
-import loginImg_1 from '../../assets/loginImg_1.svg'
+import loginImg_1 from '../../assets/loginImg_1.png'
 import rightArrowImg from '../../assets/right-arrow.svg'
 import leftArrowImg from "../../assets/left-arrow.svg";
 import loginImgStyle from './LoginImg.module.scss'

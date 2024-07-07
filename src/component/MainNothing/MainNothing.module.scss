@@ -1,0 +1,35 @@
+.MainNothingContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.addCastReminding {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+  .emptyImg {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 16px;
+  }
+  .remindingTxet {
+    font-size: 18px;
+    font-weight: 500;
+    color: #718096;
+  }
+}
+
+.addBtn {
+  width: 191px;
+  height: 44px;
+  border-radius: 8px;
+  background-color: #FF7F50;
+  .btnText {
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+  }
+}

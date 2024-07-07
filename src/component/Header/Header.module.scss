@@ -1,6 +1,7 @@
 .headerContainer {
   width: 80%;
   margin-left: 20%;
+  margin-bottom: 16px;
   padding: 40px 60px 0px 14px;
   display: flex;
   justify-content: space-between;
@@ -34,8 +35,6 @@
     font-weight: 700;
   }
   .dropDown {
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
+    display: block;
   }
 }
