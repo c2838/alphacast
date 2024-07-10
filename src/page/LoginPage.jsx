@@ -1,6 +1,9 @@
 import LoginMain from "../component/LoginMain";
 import LoginImg from "../component/LoginImg"
 import LoginPageStyle from "./LoginPage.module.scss";
+import { useContext } from "react";
+import { LoginInfosContext } from "../context/constContext";
+
 
 function LoginPageContainer({ children }) {
   return (
@@ -11,10 +14,13 @@ function LoginPageContainer({ children }) {
 }
 
 export default function LoginPage() {
+  const loginInfos = useContext(LoginInfosContext)
   return (
-    <LoginPageContainer>
-      <LoginMain />
-      <LoginImg />
-    </LoginPageContainer>
+    <LoginInfosContext.Provider value={loginInfos}>
+      <LoginPageContainer>
+        <LoginMain />
+        <LoginImg />
+      </LoginPageContainer>
+    </LoginInfosContext.Provider>
   );
 }
