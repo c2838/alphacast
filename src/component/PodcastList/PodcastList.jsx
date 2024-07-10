@@ -8,7 +8,7 @@ function ListItems() {
   const listItems = podcastListData.map(item => {
     return (
       <ListItem
-        id={item.id}
+        key={item.id}
         cover={item.cover}
         title={item.title}
         icon={item.icon}

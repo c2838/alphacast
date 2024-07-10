@@ -1,6 +1,7 @@
 import { createContext } from 'react';
 import favIcon from '../assets/favor-icon.svg'
 import coverExample from '../assets/playing-cover-example.jpg'
+import channelCover from "../assets/podcast-channel-cover.jpg";
 
 const castCatrgoryItems = [
   { id: 1, name: "通勤清單", icon: "🚌" },
@@ -35,5 +36,39 @@ const podcastList = [
   },
 ];
 
+const podcastCards = [
+  {
+    id: 1,
+    cover: channelCover,
+    title: "Siddhartha",
+    author: "BBC World Service",
+  },
+  {
+    id: 2,
+    cover: channelCover,
+    title:"Siddhartha",
+    author: "BBC World Service",
+  },
+  {
+    id: 3,
+    cover: channelCover,
+    title:"Siddhartha",
+    author: "BBC World Service",
+  },
+  {
+    id: 4,
+    cover: channelCover,
+    title: "Siddhartha",
+    author: "BBC World Service",
+  },
+  {
+    id: 5,
+    cover: channelCover,
+    title: "Siddhartha",
+    author: "BBC World Service",
+  },
+];
+
 export const NavCastCatrgoryListContext = createContext(castCatrgoryItems)
 export const PodCastListContext = createContext(podcastList)
+export const PodCastCardsContext = createContext(podcastCards)

@@ -1,0 +1,49 @@
+.cardContainer {
+  width: 178px;
+  height: 266px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 24px 8px 24px 0 rgba(199, 199, 199, 0.24);
+  .cover {
+    width: 144px;
+    height: 144px;
+    margin-bottom: 8px;
+    border-radius: 16px;
+  }
+  .cardInfo {
+    width: 144px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    .castTitle {
+      margin-bottom: 4px;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 700;
+      color: #141416;
+    }
+    .castAuthor {
+      margin-bottom: 8px;
+      font-size: 12px;
+      line-height: 17px;
+      font-weight: 400;
+      color: #93989A;
+    }
+    .moreInfo {
+      width: 44px;
+      height: 28px;
+      padding: 4px 8px 4px 8px;
+      border-radius: 4px;
+      background-color: #30A9DE;
+      .moreText {
+        font-size: 14px;
+        font-weight: 400;
+        color: #fff;
+      }
+    }
+  }
+}

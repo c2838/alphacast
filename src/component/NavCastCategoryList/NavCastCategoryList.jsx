@@ -8,7 +8,7 @@ function CastCategory() {
   const castCategoryItems = useContext(NavCastCatrgoryListContext);
   const castCategory= castCategoryItems.map(item => {
     return (
-      <CategoryItem id={item.id} icon={item.icon} name={item.name} />
+      <CategoryItem key={item.id} icon={item.icon} name={item.name} />
     )
   })
   return <>{castCategory}</>
