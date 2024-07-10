@@ -1,4 +1,4 @@
-import NavCastList from '../NavCastList/NavCastList';
+import NavCastCategoryList from "../NavCastCategoryList";
 import logoImg from '../../assets/logo.svg'
 import navStyle from './LeftNav.module.scss'
 
@@ -18,7 +18,7 @@ export default function LeftNav() {
         <img className={navStyle.logoImg} src={logoImg} alt="logo" />
         <span className={navStyle.divider} />
       </div>
-      <NavCastList />
+      <NavCastCategoryList />
     </LeftNavContainer>
   );
 }

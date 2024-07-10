@@ -1,6 +1,8 @@
 import { createContext } from 'react';
+import favIcon from '../assets/favor-icon.svg'
+import coverExample from '../assets/playing-cover-example.jpg'
 
-const castItems = [
+const castCatrgoryItems = [
   { id: 1, name: "通勤清單", icon: "🚌" },
   { id: 2, name: "學習清單", icon: "📚" },
   { id: 3, name: "睡前清單", icon: "💤" },
@@ -8,4 +10,30 @@ const castItems = [
   { id: 5, name: "已收藏", icon: "❤️" },
 ];
 
-export const NavCastListContext = createContext(castItems)
+const podcastList = [
+  {
+    id: 1,
+    cover: coverExample,
+    title:
+      "Starting Your Own Podcast: Tips, Tricks, and Advice From Anchor Creators",
+    icon: favIcon,
+    introduction:
+      "A Spotify podcast sharing fresh insights on important topics of the moment—in a way only Spotify can. You’ll hear from experts in the music, podcast and tech industries as we discove",
+    uploadDate: "2023-04-08",
+    duration: "1 小時 20 分",
+  },
+  {
+    id: 2,
+    cover: coverExample,
+    title:
+      "Starting Your Own Podcast: Tips, Tricks, and Advice From Anchor Creators",
+    icon: favIcon,
+    introduction:
+      "A Spotify podcast sharing fresh insights on important topics of the moment—in a way only Spotify can. You’ll hear from experts in the music, podcast and tech industries as we discove",
+    uploadDate: "2023-04-08",
+    duration: "1 小時 20 分",
+  },
+];
+
+export const NavCastCatrgoryListContext = createContext(castCatrgoryItems)
+export const PodCastListContext = createContext(podcastList)

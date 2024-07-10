@@ -1,7 +1,7 @@
 import coverImg from '../../assets/playing-cover-example.jpg'
 import unfavorIcon from '../../assets/unfavor-icon.svg'
 import stopIcon from '../../assets/stop-playing.svg'
-import nowStyle from './MainNowPlaying.module.scss'
+import nowStyle from './NowPlaying.module.scss'
 
 export function NowPlayingContainer({ children }) {
   return (
@@ -11,7 +11,7 @@ export function NowPlayingContainer({ children }) {
   )
 }
 
-export default function MainNowPlaying() {
+export default function NowPlaying() {
   return (
     <NowPlayingContainer>
       <div className={nowStyle.titleGroup}>
