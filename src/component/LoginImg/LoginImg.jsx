@@ -17,13 +17,13 @@ export default function LoginImg() {
   const loginInfos = useContext(LoginInfosContext);
   const [currentInfo, setCurrentInfo] = useState(loginInfos[0]);
 
-  function handlePlus() {
+  function handleNext() {
     setCurrentInfo((prev) => {
       const nextInfoId = prev.id >= loginInfos.length ? 1 : prev.id + 1;
       return loginInfos.find((info) => info.id === nextInfoId);
     });
   }
-  function handleMinus() {
+  function handlePrevous() {
     setCurrentInfo((prev) => {
       const prevInfoId = prev.id <= 1 ? 3 : prev.id - 1;
       return loginInfos.find((info) => info.id === prevInfoId);
@@ -31,14 +31,14 @@ export default function LoginImg() {
   }
 
   useEffect(() => {
-    const timer = setTimeout(handlePlus, 3000);
+    const timer = setTimeout(handleNext, 3000);
     return () => clearTimeout(timer);
   }, [currentInfo]);
 
 
   return (
     <LoginImgContainer>
-      <button onClick={handleMinus}>
+      <button onClick={handlePrevous}>
         <img
           className={loginImgStyle.leftArrowImg}
           src={leftArrowImg}
@@ -81,7 +81,7 @@ export default function LoginImg() {
           />
         </div>
       </div>
-      <button onClick={handlePlus}>
+      <button onClick={handleNext}>
         <img
           className={loginImgStyle.rightArrowImg}
           src={rightArrowImg}

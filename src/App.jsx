@@ -11,11 +11,16 @@ function App() {
   const [castCatrgoryList, setCastCatrgoryList] = useState(CastCatrgoryList);
   const [podcastList, setPodcastList] = useState(PodcastList)
   const [podcastCards, setpodcastCards] = useState(PodcasrCards)
+  const [isLearnMore, setIsLearnMore] = useState(false);
+
+  function handleClickLearnMore() {
+    setIsLearnMore(!isLearnMore);
+  }
   return (
     <BrowserRouter>
       <NavCastCatrgoryListContext.Provider value={castCatrgoryList}>
         <PodCastListContext.Provider value={podcastList}>
-          <PodCastCardsContext.Provider value={podcastCards}>
+          <PodCastCardsContext.Provider value={{ podcastCards, isLearnMore, handleClickLearnMore }}>
             <Routes>
               <Route path="login" element={<LoginPage />} />
               <Route path="main" element={<MainPage />} />

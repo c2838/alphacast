@@ -1,5 +1,6 @@
 import { useContext } from 'react'
 import listStyle from './PodcastList.module.scss'
+import lsItemStyle from "./ListItem.module.scss";
 import { PodCastListContext } from '../../context/constContext'
 import ListItem from './ListItem'
 
@@ -9,6 +10,7 @@ function ListItems() {
     return (
       <ListItem
         key={item.id}
+        containerClassName={lsItemStyle.itemContainer}
         cover={item.cover}
         title={item.title}
         icon={item.icon}
@@ -16,7 +18,7 @@ function ListItems() {
         uploadDate={item.uploadDate}
         duration={item.duration}
       />
-    )
+    );
   })
   return <>{listItems}</>
 }

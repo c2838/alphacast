@@ -1,0 +1,90 @@
+.learnMoreModalContainer {
+  width: 868px;
+  height: 750px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: #fff;
+  border-radius: 16px;
+  .divider {
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin-bottom: 16px;
+    background-color: #EBEBEB;
+  }
+}
+
+.channelGroup {
+  width: 100%;
+  height: 160px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .channelCover {
+    width: 128px;
+    height: 128px;
+    margin-right: 16px;
+    flex-shrink: 0;
+    border-radius: 10.7px;
+  }
+  .channelInfo {
+    height: 100%;
+    flex-grow: 1;
+    .channelTitleGroup{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .channelTitle {
+        font-size: 18px;
+        line-height: 26px;
+        font-weight: 700;
+      }
+    }
+    
+    .channelAuthor {
+      font-size: 12px;
+      line-height: 17px;
+      font-weight: 400;
+      color: #93989A;
+    }
+    .channelIntroduction {
+      font-size: 12px;
+      line-height: 17px;
+      font-weight: 400;
+      color: #718096;
+    }
+  }
+  .channelDelete {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    .delBtn {
+      display: block;
+      height: 25px;
+      padding: 4px 8px 4px 8px;
+      font-size: 12px;
+      line-height: 17px;
+      font-weight: 400;
+      color: #FF5050;
+      border: 1px solid #FF5050;
+      border-radius: 4px;
+    }
+  }
+}
+
+.lsItemContainer {
+  width: 831px;
+  height: 151px;
+  margin-bottom: 16px;
+  padding: 16px;
+  display: flex;
+  border: 1px solid #EDF2F7;
+  border-radius: 16px;
+}

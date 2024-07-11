@@ -66,30 +66,40 @@ const podcastCards = [
     cover: channelCover,
     title: "Siddhartha",
     author: "BBC World Service",
+    introduction:
+      "A Spotify podcast sharing fresh insights on important topics of the moment—in a way only Spotify can. You’ll hear from experts in the music, podcast and tech industries as we discover and uncover stories about our work and the world around us.",
   },
   {
     id: 2,
     cover: channelCover,
-    title:"Siddhartha",
+    title: "Siddhartha",
     author: "BBC World Service",
+    introduction:
+      "A Spotify podcast sharing fresh insights on important topics of the moment—in a way only Spotify can. You’ll hear from experts in the music, podcast and tech industries as we discover and uncover stories about our work and the world around us.",
   },
   {
     id: 3,
     cover: channelCover,
-    title:"Siddhartha",
+    title: "Siddhartha",
     author: "BBC World Service",
+    introduction:
+      "A Spotify podcast sharing fresh insights on important topics of the moment—in a way only Spotify can. You’ll hear from experts in the music, podcast and tech industries as we discover and uncover stories about our work and the world around us.",
   },
   {
     id: 4,
     cover: channelCover,
     title: "Siddhartha",
     author: "BBC World Service",
+    introduction:
+      "A Spotify podcast sharing fresh insights on important topics of the moment—in a way only Spotify can. You’ll hear from experts in the music, podcast and tech industries as we discover and uncover stories about our work and the world around us.",
   },
   {
     id: 5,
     cover: channelCover,
     title: "Siddhartha",
     author: "BBC World Service",
+    introduction:
+      "A Spotify podcast sharing fresh insights on important topics of the moment—in a way only Spotify can. You’ll hear from experts in the music, podcast and tech industries as we discover and uncover stories about our work and the world around us.",
   },
 ];
 

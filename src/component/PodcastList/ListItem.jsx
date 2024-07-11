@@ -1,9 +1,9 @@
 import startPlayingImg from '../../assets/start-playing.svg'
 import lsItemStyle from './ListItem.module.scss'
 
-export default function ListItem({ cover, title, icon, introduction, uploadDate, duration }) {
+export default function ListItem({ containerClassName, cover, title, icon, introduction, uploadDate, duration }) {
   return (
-    <div className={lsItemStyle.itemContainer}>
+    <div className={containerClassName}>
       <img src={cover} alt="" className={lsItemStyle.castCover} />
       <div className={lsItemStyle.castInfo}>
         <div className={lsItemStyle.titleGroup}>

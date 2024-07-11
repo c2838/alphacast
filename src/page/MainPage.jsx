@@ -1,23 +1,29 @@
 import LeftNav from '../component/LeftNav'
 import Header from '../component/Header'
 import MainContent from '../component/MainContent'
+import LearnMoreModal from "../component/LearnMoreModal";
 import mainStyle from './MainPage.module.scss'
+import { useContext } from 'react';
+import { PodCastCardsContext } from '../context/constContext';
 
-function MainPageContainer({ children }) {
-  return(
-    <section className={mainStyle.mainPageContainer}>
-      {children}
-    </section>
-  )
-}
 
 export default function MainPage() {
-  
+  const { isLearnMore } = useContext(PodCastCardsContext)
   return (
-      <MainPageContainer>
+    <>
+      <section
+        className={
+          isLearnMore
+            ? mainStyle.mainPageContainerBlur
+            : mainStyle.mainPageContainer
+        }
+      >
         <LeftNav />
         <Header />
         <MainContent />
-      </MainPageContainer>
+      </section>
+      {isLearnMore && <div className={mainStyle.blurColor} />} 
+      {isLearnMore && <LearnMoreModal />}
+    </>
   );
 }

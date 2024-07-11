@@ -1,5 +1,5 @@
 import NowPlaying from "../NowPlaying";
-import PodcastList from "../PodcastList";
+import { PodcastList } from "../PodcastList";
 import favContentStyle from './FavoriteContent.module.scss'
 
 function FavoriteContentContainer({ children }) {

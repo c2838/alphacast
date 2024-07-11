@@ -4,7 +4,7 @@ import { PodCastCardsContext } from "../../context/constContext";
 import CardItem from "./CardItem";
 
 function CardItems() {
-  const podcastCardData = useContext(PodCastCardsContext);
+  const { podcastCards: podcastCardData, handleClickLearnMore } = useContext(PodCastCardsContext);
   const cardItems = podcastCardData.map(item => {
     return (
       <CardItem
@@ -12,6 +12,7 @@ function CardItems() {
         cover={item.cover}
         title={item.title}
         author={item.author}
+        onClick={handleClickLearnMore}
       />
     )
   })
