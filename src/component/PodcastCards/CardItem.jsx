@@ -7,7 +7,9 @@ export default function CardItem({ cover, title, author, onClick }) {
       <div className={cardStyle.cardInfo}>
         <h4 className={cardStyle.castTitle}>{title}</h4>
         <span className={cardStyle.castAuthor}>{author}</span>
-        <button className={cardStyle.moreInfo}><span className={cardStyle.moreText} onClick={onClick}>更多</span></button>
+        <button className={cardStyle.moreInfo} onClick={onClick}>
+          <span className={cardStyle.moreText}>更多</span>
+        </button>
       </div>
     </div>
   );

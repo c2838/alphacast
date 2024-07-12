@@ -1,7 +1,27 @@
 .listItem {
   width: 196px;
-  margin-bottom: 35px;
+  height: 47px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
   font-size: 14px;
+}
+
+.listItemActive {
+  composes: listItem;
+  border-radius: 12px;
+  background-color: #000;
+  .listName {
+    color: #fff;
+  }
+  .moreBtn {
+    .moreIcon {
+      background-color: rgba(255,255,255,1);
+      &::before, &::after {
+        background-color: rgba(255,255,255,1);
+      }
+    }
+  }
 }
 
 .categoryTitleGroup{
@@ -11,42 +31,42 @@
   display: flex;
   align-items: center;
   cursor: pointer;
-  .listIcon {
+}
+
+.listIcon {
     margin-right: 6px;
   }
-  .listName {
-    color: #718096;
-    font-weight: 500;
-  }
-  .moreBtn {
-    position: absolute;
-    right: 10px;
-    border: none;
-    background-color: transparent;
-    .moreIcon {
-      position: relative;
+.listName {
+  color: #718096;
+  font-weight: 500;
+}
+.moreBtn {
+  position: absolute;
+  right: 10px;
+  border: none;
+  background-color: transparent;
+  .moreIcon {
+    position: relative;
+    display: block;
+    width: 3px;
+    height: 3px;
+    border-radius: 99em;
+    background-color: rgba(113,128,150,0.5);
+    cursor: pointer;
+    &::before, &::after {
+      content: '';
       display: block;
       width: 3px;
       height: 3px;
+      position: absolute;
       border-radius: 99em;
       background-color: rgba(113,128,150,0.5);
-      cursor: pointer;
-      &::before, &::after {
-        content: '';
-        display: block;
-        width: 3px;
-        height: 3px;
-        position: absolute;
-        border-radius: 99em;
-        background-color: rgba(113,128,150,0.5);
-      }
-      &::before {
-          top: 6px;
-      }
-      &::after {
-          bottom: 6px;
-      }
+    }
+    &::before {
+        top: 6px;
+    }
+    &::after {
+        bottom: 6px;
     }
   }
 }
-

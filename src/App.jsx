@@ -1,24 +1,33 @@
 import { MainPage, FavoritePage, LoginPage, HomePage } from './page'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { NavCastCatrgoryListContext, PodCastCardsContext, PodCastListContext } from "./context/constContext";
+import { NavCastCategoryListContext, PodCastCardsContext, PodCastListContext } from "./context/constContext";
 import { useContext, useState } from "react";
 import './App.css'
 
 function App() {
-  const CastCatrgoryList = useContext(NavCastCatrgoryListContext);
+  // 標頭分類資料渲染
+  const CastCategoryList = useContext(NavCastCategoryListContext);
+  // 列表資料
   const PodcastList = useContext(PodCastListContext)
+  // 卡片資料
   const PodcasrCards = useContext(PodCastCardsContext)
-  const [castCatrgoryList, setCastCatrgoryList] = useState(CastCatrgoryList);
+  const [castCategoryList, setCastCategoryList] = useState(CastCategoryList);
   const [podcastList, setPodcastList] = useState(PodcastList)
   const [podcastCards, setpodcastCards] = useState(PodcasrCards)
+  // learnModal觸發
   const [isLearnMore, setIsLearnMore] = useState(false);
+  const [castCategory, setCastCategory] = useState('已收藏')
 
   function handleClickLearnMore() {
     setIsLearnMore(!isLearnMore);
   }
+
+  function handleChangeCategory(category) {
+    setCastCategory(category)
+  }
   return (
     <BrowserRouter>
-      <NavCastCatrgoryListContext.Provider value={castCatrgoryList}>
+      <NavCastCategoryListContext.Provider value={{ castCategoryList, castCategory, handleChangeCategory }}>
         <PodCastListContext.Provider value={podcastList}>
           <PodCastCardsContext.Provider value={{ podcastCards, isLearnMore, handleClickLearnMore }}>
             <Routes>
@@ -29,7 +38,7 @@ function App() {
             </Routes>
           </PodCastCardsContext.Provider>
         </PodCastListContext.Provider>
-      </NavCastCatrgoryListContext.Provider>
+      </NavCastCategoryListContext.Provider>
     </BrowserRouter>
   );
 }

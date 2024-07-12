@@ -103,7 +103,7 @@ const podcastCards = [
   },
 ];
 
-export const NavCastCatrgoryListContext = createContext(castCatrgoryItems)
+export const NavCastCategoryListContext = createContext(castCatrgoryItems)
 export const LoginInfosContext = createContext(loginInfos)
 export const PodCastListContext = createContext(podcastList)
 export const PodCastCardsContext = createContext(podcastCards)
