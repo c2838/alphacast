@@ -1,0 +1,35 @@
+.editContainer {
+  position: absolute;
+  top: 50%;
+  left: 90%;
+  z-index: 99;
+  width: 180px;
+  height: 156px;
+  background-color: #FEFEFE;
+  border: 1px solid #EBEBEB;
+  border-radius: 8px;
+  box-shadow: 6px 10px 30px 1px rgba(108, 95, 188, 0.12);
+}
+
+
+.editList{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  .editItem {
+    width: 100%;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    border-bottom: 1px solid #EBEBEB;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #111111;
+    cursor: pointer;
+    &:hover {
+      color: #FF7F50;
+    }
+  }
+}
