@@ -8,25 +8,26 @@ import CardItem from './component/PodcastCards/CardItem';
 function App() {
   // 標頭分類資料渲染
   const CastCategoryList = useContext(NavCastCategoryListContext);
+  const [castCategoryList, setCastCategoryList] = useState(CastCategoryList);
   // 列表資料
   const PodcastList = useContext(PodCastListContext)
+  const [podcastList, setPodcastList] = useState(PodcastList);
   // 卡片資料
   const PodcasrCards = useContext(PodCastCardsContext)
-  const [castCategoryList, setCastCategoryList] = useState(CastCategoryList);
-  const [podcastList, setPodcastList] = useState(PodcastList)
   const [podcastCards, setpodcastCards] = useState(PodcasrCards)
   // learnModal觸發
   const [isLearnMore, setIsLearnMore] = useState(false);
   // edit category Modal觸發
   const [categoryEdit, setCategoryEdit] = useState({category: '', toggle: false});
+  // 跳轉不同分類用
   const [castCategory, setCastCategory] = useState('')
-
+  // 新增頻道modal觸發
   const [isAddChannel, setIsAddChannel] = useState(false);
-
-  
+  // 新增分類用
+  const [isAddCategory, setIsAddCategory] = useState(false)
 
   function handleClickLearnMore() {
-    setIsLearnMore(!isLearnMore);
+    setIsLearnMore(!isLearnMore)
   }
 
   function handleClickEdit(name) {
@@ -37,7 +38,7 @@ function App() {
         toggle: true,
       });
     } else {
-        if (name === categoryEdit.category) {
+        if (name === categoryEdit.category || name === '') {
           setCategoryEdit({
             ...categoryEdit,
             category: '',
@@ -60,6 +61,11 @@ function App() {
     setIsAddChannel(!isAddChannel)
   }
 
+  function handleClickAddCategory() {
+    setIsAddCategory(!isAddCategory)
+  }
+
+
   return (
     <BrowserRouter>
       <NavCastCategoryListContext.Provider
@@ -69,6 +75,8 @@ function App() {
           handleChangeCategory,
           categoryEdit,
           handleClickEdit,
+          isAddCategory,
+          handleClickAddCategory
         }}
       >
         <PodCastListContext.Provider value={podcastList}>

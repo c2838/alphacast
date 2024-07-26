@@ -3,18 +3,20 @@ import Header from '../component/Header'
 import MainContent from '../component/MainContent'
 import LearnMoreModal from "../component/LearnMoreModal";
 import AddChannelModal from '../component/AddChannelModal'
+import AddCategoryModal from '../component/AddCategoryModal';
 import mainStyle from './MainPage.module.scss'
-import { useContext, useState } from 'react';
-import { PodCastCardsContext } from '../context/constContext';
+import { useContext } from 'react';
+import { NavCastCategoryListContext, PodCastCardsContext } from '../context/constContext';
 
 
 export default function MainPage() {
   const { isLearnMore, isAddChannel } = useContext(PodCastCardsContext)
+  const { isAddCategory } = useContext(NavCastCategoryListContext)
   return (
     <>
       <section
         className={
-          (isLearnMore || isAddChannel)
+          (isLearnMore || isAddChannel || isAddCategory)
             ? mainStyle.mainPageContainerBlur
             : mainStyle.mainPageContainer
         }
@@ -23,9 +25,10 @@ export default function MainPage() {
         <Header />
         <MainContent />
       </section>
-      {(isLearnMore || isAddChannel) && <div className={mainStyle.blurColor} />} 
+      {(isLearnMore || isAddChannel || isAddCategory) && <div className={mainStyle.blurColor} />} 
       {isLearnMore && <LearnMoreModal />}
       {isAddChannel && <AddChannelModal />}
+      {isAddCategory && <AddCategoryModal />}
     </>
   );
 }

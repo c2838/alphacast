@@ -43,17 +43,17 @@ function CastCategory() {
 
 
 export default function NavCastCategoryList() {
+  const { handleClickAddCategory } = useContext(NavCastCategoryListContext)
   return (
-      <ul className={castListStyle.castListContainer}>
-        <CastCategory />
-        <button className={castListStyle.plusBtn}>
-          <img
-            className={castListStyle.btnImg}
-            src={plusIcon}
-            alt="plus-icon"
-          />
-          <span className={castListStyle.btnText}>新增分類</span>
-        </button>
-      </ul>
+    <ul className={castListStyle.castListContainer}>
+      <CastCategory />
+      <button
+        className={castListStyle.plusBtn}
+        onClick={handleClickAddCategory}
+      >
+        <img className={castListStyle.btnImg} src={plusIcon} alt="plus-icon" />
+        <span className={castListStyle.btnText}>新增分類</span>
+      </button>
+    </ul>
   );
 }

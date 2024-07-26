@@ -1,0 +1,77 @@
+.categoryModalContainer {
+  width: 414px;
+  height: 360px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 16px;
+  background-color: #fff;
+}
+
+.titleGroup {
+  height: 58px;
+  width: 100%;
+  padding: 0 16px;
+  margin: 16px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #EBEBEB;
+  .title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26px;
+  }
+  .closeIcon {
+    cursor: pointer;
+  }
+}
+
+.inputGroup {
+  width: 382px;
+  height: 54px;
+  margin: 0 auto 16px auto;
+  position: relative;
+  .searchInput{
+    width: 100%;
+    height: 100%;
+    background-color: #F5F5F5;
+    border: none;
+    border-radius: 8px;
+    &::placeholder {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      color: #718096;
+    }
+  }
+}
+
+.footer {
+  width: 100%;
+  padding: 0 16px;
+  position: absolute;
+  bottom: 32px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 0 16px 16px;
+  .cancelBtn {
+    width: 191px;
+    height: 44px;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 8px;
+  }
+  .addBtn {
+    width: 191px;
+    height: 44px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    background-color: rgba(255, 127, 80);
+    border-radius: 8px;
+  }
+}
