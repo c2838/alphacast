@@ -1,6 +1,8 @@
 import NowPlaying from "../NowPlaying";
+import Nothing from "../Nothing";
 import { PodcastList } from "../PodcastList";
 import favContentStyle from './FavoriteContent.module.scss'
+import { useLocation } from "react-router-dom";
 
 function FavoriteContentContainer({ children }) {
   return (
@@ -11,9 +13,11 @@ function FavoriteContentContainer({ children }) {
 }
 
 export default function FavoriteContent() {
+  const location = useLocation().pathname
   return (
     <FavoriteContentContainer>
-      <PodcastList />
+      <Nothing location={location} />
+      {/* <PodcastList /> */}
       <NowPlaying />
     </FavoriteContentContainer>
   )

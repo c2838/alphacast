@@ -1,11 +1,9 @@
 import { Link } from "react-router-dom";
-import { useContext } from "react";
-import { NavCastCategoryListContext } from "../../context/constContext";
+import NavEditModal from "../NavEditModal";
 import categoryItemStyle from "./CategoryItem.module.scss";
 
 
 export default function CategoryItem({ listItemStyle, icon, name, handleChangeCategory, categoryEdit, handleClickEdit }) {
-  const { NavEditModal } = useContext(NavCastCategoryListContext);
   function listLink(name) {
     return (
       <Link

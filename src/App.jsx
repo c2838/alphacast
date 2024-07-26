@@ -1,5 +1,4 @@
 import { MainPage, FavoritePage, LoginPage, HomePage } from './page'
-import NavEditModal from './component/NavEditModal';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { NavCastCategoryListContext, PodCastCardsContext, PodCastListContext } from "./context/constContext";
 import { useContext, useState } from "react";
@@ -21,6 +20,8 @@ function App() {
   // edit category Modal觸發
   const [categoryEdit, setCategoryEdit] = useState({category: '', toggle: false});
   const [castCategory, setCastCategory] = useState('')
+
+  const [isAddChannel, setIsAddChannel] = useState(false);
 
   
 
@@ -54,6 +55,11 @@ function App() {
   function handleChangeCategory(category) {
     setCastCategory(category)
   }
+
+  function handleClickAddChannel() {
+    setIsAddChannel(!isAddChannel)
+  }
+
   return (
     <BrowserRouter>
       <NavCastCategoryListContext.Provider
@@ -61,14 +67,19 @@ function App() {
           castCategoryList,
           castCategory,
           handleChangeCategory,
-          NavEditModal,
           categoryEdit,
           handleClickEdit,
         }}
       >
         <PodCastListContext.Provider value={podcastList}>
           <PodCastCardsContext.Provider
-            value={{ podcastCards, isLearnMore, handleClickLearnMore }}
+            value={{
+              podcastCards,
+              isLearnMore,
+              handleClickLearnMore,
+              isAddChannel,
+              handleClickAddChannel
+            }}
           >
             <Routes>
               <Route path="alphacast/login" element={<LoginPage />} />

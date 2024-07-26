@@ -1,17 +1,16 @@
-import MainNothing from "../MainNothing"
+import Nothing from "../Nothing"
 import PodcastCards from "../PodcastCards"
 import NowPlaying from "../NowPlaying"
 import contentStyle from './MainContent.module.scss'
-import { useContext } from "react"
-import { PodCastCardsContext } from "../../context/constContext"
+import { useLocation } from "react-router-dom"
 
 
 export default function MainContent() {
-  const { isLearnMore } = useContext(PodCastCardsContext)
+  const location = useLocation().pathname;
   return (
     <section className={contentStyle.mainContentContainer}>
-      {/* <MainNothing /> */}
-      <PodcastCards />
+      <Nothing location={location}/>
+      {/* <PodcastCards /> */}
       <NowPlaying />
     </section>
   );
